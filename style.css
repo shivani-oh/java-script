@@ -1,0 +1,44 @@
+header strong{
+    font-size: 20px;
+    color: white;
+    padding: 0px 30px;
+}
+header div{
+    text-align: center;
+    background-color: #333;
+    height: 100px;
+    padding: 20px 50px;
+}
+
+.btn1{
+    width: 100px;
+    color: white;
+    background-color:teal;
+    font-size: 30px;
+}
+
+.btn3{
+    color: white;
+    padding: 0px 50px;
+    background-color:teal;
+    font-size: 25px;
+}
+.div1{
+    background-color:#1ff6eb;
+    height: 100%;
+    width: 418px;
+    margin: 30px auto;
+}
+h1{
+    font-size: 50px;
+    color:teal;
+    text-align: center;
+}
+header div h1{
+    color: #1ff6eb;
+}
+header div table input{
+    padding: 10px 15px;
+    cursor: text;
+}
+

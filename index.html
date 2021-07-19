@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>COUNTER</h1>
+
+        </div>
+        <div>
+            <button class="btn1" type="button"  onclick="button1(1)">+</button>
+            <strong id="text"></strong>
+            <button class="btn1"  type="button" onclick="button1(2)">-</button>
+
+        </div>
+        <h1>CALCULATOR</h1>
+        <div class="div1">
+            <table> 
+                <tr>
+                    <td colspan="2"><input class = "display-box" type = "text" id = "result" disabled /></td>
+                    <td><button class="btn1"  type="button" onclick="noDisplay()">clr</button></td>
+                    <td><button class="btn1"  type="button" onclick = "calculate()" >=</butto</td>
+                </tr>
+                <tr>
+                  <td><button class="btn1"  type="button" onclick="display('1')">1</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('2')">2</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('3')">3</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('+')">+</button></td>
+
+                </tr>
+                <tr>
+                  <td><button class="btn1"  type="button" onclick="display('4')">4</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('5')">5</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('6')">6</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('%')">%</button></td>
+
+                </tr>
+                <tr>
+                  <td><button class="btn1"  type="button" onclick="display('7')">7</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('8')">8</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('9')">9</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('/')">/</button></td>
+
+                </tr>
+                <tr>
+                  <td><button class="btn1"  type="button" onclick="display('0')">0</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('.')">.</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('*')">*</button></td>
+                  <td><button class="btn1"  type="button" onclick="display('-')">-</button></td>
+                </tr>
+        </table>
+    </div>
+    </header> 
+
+    <script>
+        var value=2000;
+        window.onload=function show()
+        {
+            document.getElementById("text").innerHTML=value; 
+
+        }
+
+        function button1(e)
+        {
+
+            if (e === 1)
+            {
+                value=value+1;
+                document.getElementById("text").innerHTML=value;
+            }
+            else{
+                value=value-1;
+                document.getElementById("text").innerHTML=value;
+
+            }
+
+        }
+        function noDisplay()
+        {
+            document.getElementById("result").value =" ";
+
+        }
+        function display(value)
+        {
+            document.getElementById("result").value += value;
+        }
+        function calculate() 
+        {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+    </script> 
+</body>
+</html>
